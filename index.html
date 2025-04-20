@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Layanan Hosting - VPS, Domain & Lainnya</title>
+    <link rel="icon" type="image/jpeg" href="alfa.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ALFA Hosting</h1> <!-- Perbaikan typo: hapus spasi ekstra jika ada -->
+            <nav>
+                <ul>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#payment">Pembayaran</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Solusi Hosting Lengkap Anda Di ALFA HOSTING</h2>
+            <p>Dapatkan VPS andal, domain, dan layanan hosting lainnya dengan opsi pembayaran otomatis yang mudah.</p>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <h3>Kebutuhan</h3>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Hosting VPS - Rp 500.000</h3>
+                <p>VPS berkinerja tinggi dengan akses root penuh dan sumber daya yang dapat diskalakan.</p>
+                <p><strong>Sudah dibeli oleh: 120 pelanggan</strong></p>
+                <label for="spec-hosting-vps">Pilih Spesifikasi:</label>
+                <select id="spec-hosting-vps" class="spec-select">
+                    <option value="Standard">Standard - Rp 500.000</option>
+                    <option value="High Performance">High Performance - Rp 600.000</option>
+                    <option value="Enterprise">Enterprise - Rp 700.000</option>
+                </select>
+                <button class="order-btn" data-service="Hosting VPS">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>VPS 1 CPU 2GB RAM - Rp 600.000</h3>
+                <p>VPS dengan 1 CPU dan 2GB RAM untuk kebutuhan hosting yang lebih spesifik.</p>
+                <p><strong>Sudah dibeli oleh: 50 pelanggan</strong></p>
+                <label for="spec-vps-1">Pilih Spesifikasi:</label>
+                <select id="spec-vps-1" class="spec-select">
+                    <option value="Standard">Standard - Rp 600.000</option>
+                    <option value="High Performance">High Performance - Rp 750.000</option>
+                    <option value="Enterprise">Enterprise - Rp 900.000</option>
+                </select>
+                <button class="order-btn" data-service="VPS 1 CPU 2GB RAM">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>VPS 2 CPU 4GB RAM - Rp 1.000.000</h3>
+                <p>VPS dengan 2 CPU dan 4GB RAM untuk performa lebih tinggi.</p>
+                <p><strong>Sudah dibeli oleh: 30 pelanggan</strong></p>
+                <label for="spec-vps-2">Pilih Spesifikasi:</label>
+                <select id="spec-vps-2" class="spec-select">
+                    <option value="Standard">Standard - Rp 1.000.000</option>
+                    <option value="High Performance">High Performance - Rp 1.200.000</option>
+                    <option value="Enterprise">Enterprise - Rp 1.400.000</option>
+                </select>
+                <button class="order-btn" data-service="VPS 2 CPU 4GB RAM">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Shared Hosting - Rp 300.000</h3>
+                <p>Hosting bersama yang terjangkau dengan jaminan uptime 99,9%.</p>
+                <p><strong>Sudah dibeli oleh: 200 pelanggan</strong></p>
+                <label for="spec-shared-hosting">Pilih Spesifikasi:</label>
+                <select id="spec-shared-hosting" class="spec-select">
+                    <option value="Standard">Standard - Rp 300.000</option>
+                    <option value="High Performance">High Performance - Rp 350.000</option>
+                    <option value="Enterprise">Enterprise - Rp 400.000</option>
+                </select>
+                <button class="order-btn" data-service="Shared Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>WordPress Hosting - Rp 350.000</h3>
+                <p>Hosting khusus untuk situs WordPress dengan optimasi kecepatan dan keamanan.</p>
+                <p><strong>Sudah dibeli oleh: 150 pelanggan</strong></p>
+                <label for="spec-wordpress-hosting">Pilih Spesifikasi:</label>
+                <select id="spec-wordpress-hosting" class="spec-select">
+                    <option value="Standard">Standard - Rp 350.000</option>
+                    <option value="High Performance">High Performance - Rp 400.000</option>
+                    <option value="Enterprise">Enterprise - Rp 450.000</option>
+                </select>
+                <button class="order-btn" data-service="WordPress Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Website Builder - Rp 250.000</h3>
+                <p>Alat pembuat website mudah digunakan untuk membuat situs profesional.</p>
+                <p><strong>Sudah dibeli oleh: 90 pelanggan</strong></p>
+                <label for="spec-website-builder">Pilih Spesifikasi:</label>
+                <select id="spec-website-builder" class="spec-select">
+                    <option value="Standard">Standard - Rp 250.000</option>
+                    <option value="High Performance">High Performance - Rp 300.000</option>
+                    <option value="Enterprise">Enterprise - Rp 350.000</option>
+                </select>
+                <button class="order-btn" data-service="Website Builder">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Backup Cloud - Rp 300.000</h3>
+                <p>Layanan backup data otomatis ke cloud dengan keamanan tinggi.</p>
+                <p><strong>Sudah dibeli oleh: 80 pelanggan</strong></p>
+                <label for="spec-backup-cloud">Pilih Spesifikasi:</label>
+                <select id="spec-backup-cloud" class="spec-select">
+                    <option value="Standard">Standard - Rp 300.000</option>
+                    <option value="High Performance">High Performance - Rp 350.000</option>
+                    <option value="Enterprise">Enterprise - Rp 400.000</option>
+                </select>
+                <button class="order-btn" data-service="Backup Cloud">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Perlindungan Privasi Domain - Rp 100.000</h3>
+                <p>Perlindungan privasi untuk informasi domain Anda agar tetap aman.</p>
+                <p><strong>Sudah dibeli oleh: 60 pelanggan</strong></p>
+                <label for="spec-perlindungan-privasi-domain">Pilih Spesifikasi:</label>
+                <select id="spec-perlindungan-privasi-domain" class="spec-select">
+                    <option value="Standard">Standard - Rp 100.000</option>
+                    <option value="High Performance">High Performance - Rp 120.000</option>
+                    <option value="Enterprise">Enterprise - Rp 140.000</option>
+                </select>
+                <button class="order-btn" data-service="Perlindungan Privasi Domain">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Backup - Rp 320.000</h3>
+                <p>Layanan backup cloud dengan enkripsi dan pemulihan cepat.</p>
+                <p><strong>Sudah dibeli oleh: 75 pelanggan</strong></p>
+                <label for="spec-cloud-backup">Pilih Spesifikasi:</label>
+                <select id="spec-cloud-backup" class="spec-select">
+                    <option value="Standard">Standard - Rp 320.000</option>
+                    <option value="High Performance">High Performance - Rp 370.000</option>
+                    <option value="Enterprise">Enterprise - Rp 420.000</option>
+                </select>
+                <button class="order-btn" data-service="Cloud Backup">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Domain Transfer - Rp 180.000</h3>
+                <p>Transfer domain Anda dengan proses cepat dan aman.</p>
+                <p><strong>Sudah dibeli oleh: 40 pelanggan</strong></p>
+                <label for="spec-domain-transfer">Pilih Spesifikasi:</label>
+                <select id="spec-domain-transfer" class="spec-select">
+                    <option value="Standard">Standard - Rp 180.000</option>
+                    <option value="High Performance">High Performance - Rp 210.000</option>
+                    <option value="Enterprise">Enterprise - Rp 240.000</option>
+                </select>
+                <button class="order-btn" data-service="Domain Transfer">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>SSL Certificate Extended Validation - Rp 450.000</h3>
+                <p>Sertifikat SSL dengan validasi tingkat lanjut untuk keamanan maksimal.</p>
+                <p><strong>Sudah dibeli oleh: 35 pelanggan</strong></p>
+                <label for="spec-ssl-ev">Pilih Spesifikasi:</label>
+                <select id="spec-ssl-ev" class="spec-select">
+                    <option value="Standard">Standard - Rp 450.000</option>
+                    <option value="High Performance">High Performance - Rp 480.000</option>
+                    <option value="Enterprise">Enterprise - Rp 510.000</option>
+                </select>
+                <button class="order-btn" data-service="SSL Certificate Extended Validation">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Managed WordPress Hosting - Rp 550.000</h3>
+                <p>Hosting WordPress dengan manajemen penuh dan optimasi performa.</p>
+                <p><strong>Sudah dibeli oleh: 55 pelanggan</strong></p>
+                <label for="spec-managed-wp">Pilih Spesifikasi:</label>
+                <select id="spec-managed-wp" class="spec-select">
+                    <option value="Standard">Standard - Rp 550.000</option>
+                    <option value="High Performance">High Performance - Rp 600.000</option>
+                    <option value="Enterprise">Enterprise - Rp 650.000</option>
+                </select>
+                <button class="order-btn" data-service="Managed WordPress Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>SEO Optimization Service - Rp 400.000</h3>
+                <p>Layanan optimasi SEO untuk meningkatkan peringkat situs Anda di mesin pencari.</p>
+                <p><strong>Sudah dibeli oleh: 60 pelanggan</strong></p>
+                <label for="spec-seo-optimization">Pilih Spesifikasi:</label>
+                <select id="spec-seo-optimization" class="spec-select">
+                    <option value="Standard">Standard - Rp 400.000</option>
+                    <option value="High Performance">High Performance - Rp 450.000</option>
+                    <option value="Enterprise">Enterprise - Rp 500.000</option>
+                </select>
+                <button class="order-btn" data-service="SEO Optimization Service">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Custom Email Solutions - Rp 480.000</h3>
+                <p>Solusi email kustom untuk bisnis dengan fitur keamanan dan kapasitas besar.</p>
+                <p><strong>Sudah dibeli oleh: 45 pelanggan</strong></p>
+                <label for="spec-custom-email">Pilih Spesifikasi:</label>
+                <select id="spec-custom-email" class="spec-select">
+                    <option value="Standard">Standard - Rp 480.000</option>
+                    <option value="High Performance">High Performance - Rp 520.000</option>
+                    <option value="Enterprise">Enterprise - Rp 560.000</option>
+                </select>
+                <button class="order-btn" data-service="Custom Email Solutions">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Website Security Audit - Rp 350.000</h3>
+                <p>Audit keamanan situs web untuk mengidentifikasi dan memperbaiki kerentanan.</p>
+                <p><strong>Sudah dibeli oleh: 50 pelanggan</strong></p>
+                <label for="spec-website-security">Pilih Spesifikasi:</label>
+                <select id="spec-website-security" class="spec-select">
+                    <option value="Standard">Standard - Rp 350.000</option>
+                    <option value="High Performance">High Performance - Rp 380.000</option>
+                    <option value="Enterprise">Enterprise - Rp 410.000</option>
+                </select>
+                <button class="order-btn" data-service="Website Security Audit">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Database Hosting - Rp 700.000</h3>
+                <p>Hosting database berbasis cloud dengan performa tinggi dan skalabilitas.</p>
+                <p><strong>Sudah dibeli oleh: 40 pelanggan</strong></p>
+                <label for="spec-cloud-db">Pilih Spesifikasi:</label>
+                <select id="spec-cloud-db" class="spec-select">
+                    <option value="Standard">Standard - Rp 700.000</option>
+                    <option value="High Performance">High Performance - Rp 750.000</option>
+                    <option value="Enterprise">Enterprise - Rp 800.000</option>
+                </select>
+                <button class="order-btn" data-service="Cloud Database Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>24/7 Technical Support - Rp 200.000</h3>
+                <p>Dukungan teknis 24/7 untuk memastikan layanan Anda berjalan lancar.</p>
+                <p><strong>Sudah dibeli oleh: 100 pelanggan</strong></p>
+                <label for="spec-technical-support">Pilih Spesifikasi:</label>
+                <select id="spec-technical-support" class="spec-select">
+                    <option value="Standard">Standard - Rp 200.000</option>
+                    <option value="High Performance">High Performance - Rp 230.000</option>
+                    <option value="Enterprise">Enterprise - Rp 260.000</option>
+                </select>
+                <button class="order-btn" data-service="24/7 Technical Support">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Firewall - Rp 400.000</h3>
+                <p>Perlindungan firewall berbasis cloud untuk keamanan jaringan yang optimal.</p>
+                <p><strong>Sudah dibeli oleh: 70 pelanggan</strong></p>
+                <label for="spec-cloud-firewall">Pilih Spesifikasi:</label>
+                <select id="spec-cloud-firewall" class="spec-select">
+                    <option value="Standard">Standard - Rp 400.000</option>
+                    <option value="High Performance">High Performance - Rp 450.000</option>
+                    <option value="Enterprise">Enterprise - Rp 500.000</option>
+                </select>
+                <button class="order-btn" data-service="Cloud Firewall">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Website Migration Service - Rp 350.000</h3>
+                <p>Layanan migrasi website cepat dan aman ke server kami.</p>
+                <p><strong>Sudah dibeli oleh: 60 pelanggan</strong></p>
+                <label for="spec-website-migration">Pilih Spesifikasi:</label>
+                <select id="spec-website-migration" class="spec-select">
+                    <option value="Standard">Standard - Rp 350.000</option>
+                    <option value="High Performance">High Performance - Rp 380.000</option>
+                    <option value="Enterprise">Enterprise - Rp 410.000</option>
+                </select>
+                <button class="order-btn" data-service="Website Migration Service">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Domain Privacy Protection - Rp 120.000</h3>
+                <p>Perlindungan privasi domain untuk menjaga informasi pribadi Anda tetap aman.</p>
+                <p><strong>Sudah dibeli oleh: 55 pelanggan</strong></p>
+                <label for="spec-domain-privacy">Pilih Spesifikasi:</label>
+                <select id="spec-domain-privacy" class="spec-select">
+                    <option value="Standard">Standard - Rp 120.000</option>
+                    <option value="High Performance">High Performance - Rp 140.000</option>
+                    <option value="Enterprise">Enterprise - Rp 160.000</option>
+                </select>
+                <button class="order-btn" data-service="Domain Privacy Protection">Pesan Sekarang</button>
+            </div>
+        </div>
+        <h3>Jasa</h3>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Pendaftaran Domain - Rp 150.000</h3>
+                <p>Daftarkan domain Anda dengan harga kompetitif dan manajemen yang mudah.</p>
+                <p><strong>Sudah dibeli oleh: 110 pelanggan</strong></p>
+                <label for="spec-pendaftaran-domain">Pilih Spesifikasi:</label>
+                <select id="spec-pendaftaran-domain" class="spec-select">
+                    <option value="Standard">Standard - Rp 150.000</option>
+                    <option value="High Performance">High Performance - Rp 180.000</option>
+                    <option value="Enterprise">Enterprise - Rp 210.000</option>
+                </select>
+                <button class="order-btn" data-service="Pendaftaran Domain">Daftar Domain</button>
+            </div>
+            <div class="service-item">
+                <h3>Hosting Email - Rp 400.000</h3>
+                <p>Layanan hosting email profesional dengan keamanan dan kapasitas besar.</p>
+                <p><strong>Sudah dibeli oleh: 130 pelanggan</strong></p>
+                <label for="spec-hosting-email">Pilih Spesifikasi:</label>
+                <select id="spec-hosting-email" class="spec-select">
+                    <option value="Standard">Standard - Rp 400.000</option>
+                    <option value="High Performance">High Performance - Rp 450.000</option>
+                    <option value="Enterprise">Enterprise - Rp 500.000</option>
+                </select>
+                <button class="order-btn" data-service="Hosting Email">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Backup dan Restore - Rp 250.000</h3>
+                <p>Layanan backup otomatis dan pemulihan data untuk keamanan situs Anda.</p>
+                <p><strong>Sudah dibeli oleh: 70 pelanggan</strong></p>
+                <label for="spec-backup-dan-restore">Pilih Spesifikasi:</label>
+                <select id="spec-backup-dan-restore" class="spec-select">
+                    <option value="Standard">Standard - Rp 250.000</option>
+                    <option value="High Performance">High Performance - Rp 280.000</option>
+                    <option value="Enterprise">Enterprise - Rp 310.000</option>
+                </select>
+                <button class="order-btn" data-service="Backup dan Restore">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Sertifikat SSL - Rp 200.000</h3>
+                <p>Amankan situs Anda dengan sertifikat SSL terpercaya dan mudah dipasang.</p>
+                <p><strong>Sudah dibeli oleh: 140 pelanggan</strong></p>
+                <label for="spec-sertifikat-ssl">Pilih Spesifikasi:</label>
+                <select id="spec-sertifikat-ssl" class="spec-select">
+                    <option value="Standard">Standard - Rp 200.000</option>
+                    <option value="High Performance">High Performance - Rp 230.000</option>
+                    <option value="Enterprise">Enterprise - Rp 260.000</option>
+                </select>
+                <button class="order-btn" data-service="Sertifikat SSL">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Hosting - Rp 600.000</h3>
+                <p>Hosting berbasis cloud dengan skalabilitas tinggi dan performa optimal.</p>
+                <p><strong>Sudah dibeli oleh: 100 pelanggan</strong></p>
+                <label for="spec-cloud-hosting">Pilih Spesifikasi:</label>
+                <select id="spec-cloud-hosting" class="spec-select">
+                    <option value="Standard">Standard - Rp 600.000</option>
+                    <option value="High Performance">High Performance - Rp 650.000</option>
+                    <option value="Enterprise">Enterprise - Rp 700.000</option>
+                </select>
+                <button class="order-btn" data-service="Cloud Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Dedicated Server - Rp 1.200.000</h3>
+                <p>Server khusus dengan sumber daya penuh untuk kebutuhan bisnis besar.</p>
+                <p><strong>Sudah dibeli oleh: 50 pelanggan</strong></p>
+                <label for="spec-dedicated-server">Pilih Spesifikasi:</label>
+                <select id="spec-dedicated-server" class="spec-select">
+                    <option value="Standard">Standard - Rp 1.200.000</option>
+                    <option value="High Performance">High Performance - Rp 1.350.000</option>
+                    <option value="Enterprise">Enterprise - Rp 1.500.000</option>
+                </select>
+                <button class="order-btn" data-service="Dedicated Server">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Reseller Hosting - Rp 450.000</h3>
+                <p>Layanan hosting untuk reseller dengan kontrol penuh dan fitur lengkap.</p>
+                <p><strong>Sudah dibeli oleh: 75 pelanggan</strong></p>
+                <label for="spec-reseller-hosting">Pilih Spesifikasi:</label>
+                <select id="spec-reseller-hosting" class="spec-select">
+                    <option value="Standard">Standard - Rp 450.000</option>
+                    <option value="High Performance">High Performance - Rp 500.000</option>
+                    <option value="Enterprise">Enterprise - Rp 550.000</option>
+                </select>
+                <button class="order-btn" data-service="Reseller Hosting">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>VPS Managed - Rp 700.000</h3>
+                <p>VPS dengan manajemen penuh oleh tim ahli untuk kemudahan Anda.</p>
+                <p><strong>Sudah dibeli oleh: 65 pelanggan</strong></p>
+                <label for="spec-vps-managed">Pilih Spesifikasi:</label>
+                <select id="spec-vps-managed" class="spec-select">
+                    <option value="Standard">Standard - Rp 700.000</option>
+                    <option value="High Performance">High Performance - Rp 750.000</option>
+                    <option value="Enterprise">Enterprise - Rp 800.000</option>
+                </select>
+                <button class="order-btn" data-service="VPS Managed">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Sertifikat SSL Wildcard - Rp 350.000</h3>
+                <p>Sertifikat SSL wildcard untuk mengamankan banyak subdomain sekaligus.</p>
+                <p><strong>Sudah dibeli oleh: 45 pelanggan</strong></p>
+                <label for="spec-sertifikat-ssl-wildcard">Pilih Spesifikasi:</label>
+                <select id="spec-sertifikat-ssl-wildcard" class="spec-select">
+                    <option value="Standard">Standard - Rp 350.000</option>
+                    <option value="High Performance">High Performance - Rp 380.000</option>
+                    <option value="Enterprise">Enterprise - Rp 410.000</option>
+                </select>
+                <button class="order-btn" data-service="Sertifikat SSL Wildcard">Pesan Sekarang</button>
+            </div>
+            <div class="service-item">
+                <h3>Email Hosting Premium - Rp 500.000</h3>
+                <p>Layanan hosting email dengan fitur premium dan kapasitas besar.</p>
+                <p><strong>Sudah dibeli oleh: 85 pelanggan</strong></p>
+                <label for="spec-email-hosting-premium">Pilih Spesifikasi:</label>
+                <select id="spec-email-hosting-premium" class="spec-select">
+                    <option value="Standard">Standard - Rp 500.000</option>
+                    <option value="High Performance">High Performance - Rp 550.000</option>
+                    <option value="Enterprise">Enterprise - Rp 600.000</option>
+                </select>
+                <button class="order-btn" data-service="Email Hosting Premium">Pesan Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+        <section id="cart" class="container">
+            <h2>Keranjang Belanja</h2>
+            <table id="cart-table" border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Layanan</th>
+                        <th>Jumlah</th>
+                        <th>Harga (Rp)</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item akan ditambahkan secara dinamis -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align:right;"><strong>Total Harga:</strong></td>
+                        <td id="total-price" colspan="2">Rp 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="proceed-to-payment" style="margin-top: 15px; padding: 10px 20px; font-size: 16px;">Lanjutkan ke Pembayaran</button>
+        </section>
+
+    <section id="payment" class="container">
+        <h2>Opsi Pembayaran</h2>
+        <p>Silakan lanjutkan ke halaman <a href="payment.html">Pembayaran</a> untuk memilih metode pembayaran dan menyelesaikan transaksi Anda.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Hubungi Kami</h2>
+        <div class="personal-info">
+            <h3>Informasi Pribadi</h3>
+            <p>Alamat: Jawa Tengah,Blora,Randublatung </p>
+            <p>Nomor WA: +62 822-2676-9163</p>
+            <div style="margin-top: 15px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1234567890123!2d110.1234567890123!3d-7.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1234567890ab%3A0x1234567890abcdef!2sJl.%20Contoh%20Alamat%20No.123%2C%20Kota%20Contoh%2C%20Provinsi%20Contoh!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <p>Untuk pertanyaan dan dukungan, silakan email kami di <a href="mailto:support@hostingservices.com">sanzbot938@gmail.com</a>. <!-- GANTI DENGAN EMAIL ANDA --></p>
+        <!-- GANTI DENGAN INFORMASI PEMBAYARAN ANDA JIKA PERLU -->
+        <div id="subscription-program" style="margin-top: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f8f9fa;">
+            <h3>Program Berlangganan</h3>
+            <p>Pilih paket berlangganan yang sesuai dengan kebutuhan Anda dan nikmati layanan hosting terbaik dengan harga spesial.</p>
+            <div class="subscription-plans">
+                <div class="subscription-plan">
+                    <h4>Basic</h4>
+                    <p>Rp 100.000 / bulan</p>
+                    <ul>
+                        <li>Hosting 1 Website</li>
+                        <li>10 GB Storage</li>
+                        <li>100 GB Bandwidth</li>
+                        <li>Support Email</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Basic" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Berlangganan</button>
+                </div>
+                <div class="subscription-plan">
+                    <h4>Standard</h4>
+                    <p>Rp 250.000 / bulan</p>
+                    <ul>
+                        <li>Hosting 5 Website</li>
+                        <li>50 GB Storage</li>
+                        <li>500 GB Bandwidth</li>
+                        <li>Support Email & Chat</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Standard" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Berlangganan</button>
+                </div>
+                <div class="subscription-plan">
+                    <h4>Premium</h4>
+                    <p>Rp 500.000 / bulan</p>
+                    <ul>
+                        <li>Hosting Unlimited Website</li>
+                        <li>200 GB Storage</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>Support 24/7</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Premium" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Berlangganan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="container" style="background-color: #007bff; color: white; padding: 20px; border-radius: 5px;">
+        <h2 style="color: white;">Testimoni Pelanggan</h2>
+        <p><strong>Jumlah pelanggan yang memberikan testimoni: <span id="testimonial-count">200</span></strong></p>
+        <div class="testimonial-list" id="testimonial-list">
+            <div class="testimonial-item">
+                <p>"Layanan VPS sangat cepat dan stabil. Sangat puas dengan dukungan teknisnya!"</p>
+                <h4>- Budi Santoso</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Pendaftaran domain mudah dan harga kompetitif. Sangat direkomendasikan."</p>
+                <h4>- Sari Dewi</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Backup cloud membuat saya tenang karena data selalu aman."</p>
+                <h4>- Andi Wijaya</h4>
+            </div>
+        </div>
+        <h3 style="margin-top: 30px;">Berikan Testimoni Anda</h3>
+        <form id="testimonial-form" style="margin-top: 15px;">
+            <label for="testimonial-name">Nama:</label><br />
+            <input type="text" id="testimonial-name" name="testimonial-name" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+            <label for="testimonial-text">Testimoni:</label><br />
+            <textarea id="testimonial-text" name="testimonial-text" rows="4" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br />
+            <button type="submit" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Kirim Testimoni</button>
+        </form>
+    </section>
+
+    <section id="terms" class="container" style="background-color: #f9f9f9; padding: 30px 20px; border-radius: 10px; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h2>Syarat dan Ketentuan</h2>
+        <p>Selamat datang di ALFA Hosting. Dengan menggunakan layanan kami, Anda setuju dengan syarat dan ketentuan berikut:</p>
+        <ol>
+            <li>Layanan kami disediakan "sebagaimana adanya" tanpa jaminan apapun.</li>
+            <li>Pengguna bertanggung jawab atas penggunaan layanan sesuai hukum yang berlaku.</li>
+            <li>ALFA Hosting berhak mengubah syarat dan ketentuan kapan saja tanpa pemberitahuan sebelumnya.</li>
+            <li>Segala bentuk penyalahgunaan layanan akan ditindak sesuai hukum.</li>
+            <li>Informasi pribadi pengguna akan dilindungi sesuai kebijakan privasi kami.</li>
+            <li>Harga dan spesifikasi layanan dapat berubah sewaktu-waktu.</li>
+            <li>ALFA Hosting tidak bertanggung jawab atas kerugian langsung atau tidak langsung akibat penggunaan layanan.</li>
+        </ol>
+        <p>Jika Anda tidak setuju dengan syarat dan ketentuan ini, harap jangan menggunakan layanan kami.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ALFA Hosting. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
+
+    <!-- Live Chat Widget -->
+    <div id="live-chat" style="position: fixed; bottom: 20px; left: 20px; width: 300px; max-width: 100%; background: white; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: none; flex-direction: column; font-family: Arial, sans-serif; z-index: 10000;">
+<div id="live-chat-header" style="background-color: #007BFF; color: white; padding: 10px; cursor: pointer; border-top-left-radius: 8px; border-top-right-radius: 8px; display: flex; align-items: center; gap: 10px;">
+    <img src="alfa.jpg" alt="Logo ALFA" style="height: 24px; width: 24px; border-radius: 4px;" />
+    Chat dengan Kami <span id="live-chat-close" style="margin-left: auto; cursor: pointer;">&times;</span>
+</div>
+        <div id="live-chat-messages" style="padding: 10px; height: 200px; overflow-y: auto; background: #f9f9f9; flex-grow: 1;"></div>
+        <form id="live-chat-form" style="display: flex; border-top: 1px solid #ccc;">
+            <input type="text" id="live-chat-input" placeholder="Ketik pesan..." style="flex-grow: 1; border: none; padding: 10px; font-size: 14px;" autocomplete="off" />
+            <button type="submit" style="background-color: #007BFF; color: white; border: none; padding: 10px 15px; cursor: pointer;">Kirim</button>
+        </form>
+    </div>
+
+    <button id="live-chat-toggle" style="position: fixed; bottom: 20px; left: 20px; background-color: #007BFF; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; z-index: 10001;" aria-label="Buka chat">
+        &#9993;
+    </button>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        /* Chat message styles */
+        #live-chat-messages div {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 12px;
+            max-width: 80%;
+            clear: both;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .user-message {
+            background-color: #007BFF;
+            color: white;
+            float: right;
+            text-align: right;
+            position: relative;
+        }
+        .bot-message {
+            background-color: #f1f0f0;
+            color: #333;
+            float: left;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .bot-message img.bot-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+        /* Typing animation */
+        .typing-indicator {
+            font-style: italic;
+            color: #666;
+            margin-left: 32px;
+        }
+    </style>
+
+    <script>
+        // Live Chat Widget Script with AI Gemini integration and bot logo + typing animation
+        const liveChat = document.getElementById('live-chat');
+        const liveChatToggle = document.getElementById('live-chat-toggle');
+        const liveChatClose = document.getElementById('live-chat-close');
+        const liveChatForm = document.getElementById('live-chat-form');
+        const liveChatInput = document.getElementById('live-chat-input');
+        const liveChatMessages = document.getElementById('live-chat-messages');
+
+        liveChatToggle.addEventListener('click', () => {
+            liveChat.style.display = 'flex';
+            liveChatToggle.style.display = 'none';
+            liveChatInput.focus();
+        });
+
+        liveChatClose.addEventListener('click', () => {
+            liveChat.style.display = 'none';
+            liveChatToggle.style.display = 'block';
+        });
+
+        async function getAIResponse(message) {
+            const apiKey = 'AIzaSyAcw-ysgS7yMb2hkhasMPlkwbi35axU-cY'; // Replace with your actual AI Gemini API key
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`; // Using generateContent endpoint
+
+            try {
+                const response = await axios.post(endpoint, {
+                    contents: [
+                        {
+                            parts: [
+                                { text: message }
+                            ]
+                        }
+                    ]
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                console.log('AI Gemini API response:', response.data);
+
+                // Adjust this according to AI Gemini API response structure
+                console.log('AI Gemini API response candidates[0].content:', response.data.candidates[0].content);
+                let aiMessage = 'Maaf, tidak ada respons dari AI Gemini.';
+                if (response.data.candidates && response.data.candidates.length > 0) {
+                    const content = response.data.candidates[0].content;
+                    if (typeof content === 'string') {
+                        aiMessage = content;
+                    } else if (typeof content === 'object' && content !== null) {
+                        // Try to extract text property or join parts if available
+                        if (content.text) {
+                            aiMessage = content.text;
+                        } else if (Array.isArray(content.parts)) {
+                            aiMessage = content.parts.map(part => part.text || '').join('');
+                        } else {
+                            aiMessage = JSON.stringify(content);
+                        }
+                    } else {
+                        aiMessage = String(content);
+                    }
+                }
+                return aiMessage;
+            } catch (error) {
+                console.error('Error fetching AI Gemini response:', error);
+                let errorMessage = 'bot: Maaf, terjadi kesalahan saat memproses permintaan Anda.';
+                if (error.response && error.response.data) {
+                    if (typeof error.response.data === 'string') {
+                        errorMessage = `bot: ${error.response.data}`;
+                    } else if (error.response.data.error && error.response.data.error.message) {
+                        errorMessage = `bot: ${error.response.data.error.message}`;
+                    }
+                }
+                return errorMessage;
+            }
+        }
+
+        liveChatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = liveChatInput.value.trim();
+            if (message === '') return;
+
+            // Display user message with user icon
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('user-message');
+            userMessage.textContent = message;
+            liveChatMessages.appendChild(userMessage);
+
+            liveChatInput.value = '';
+            liveChatMessages.scrollTop = liveChatMessages.scrollHeight;
+
+            // Show typing indicator
+            const typingIndicator = document.createElement('div');
+            typingIndicator.classList.add('bot-message');
+typingIndicator.innerHTML = '<img src="alfa.jpg" alt="Bot" class="bot-logo" /> <span class="typing-indicator">Bot sedang mengetik...</span>';
+            liveChatMessages.appendChild(typingIndicator);
+            liveChatMessages.scrollTop = liveChatMessages.scrollHeight;
+
+            // Get AI response
+            const botReply = await getAIResponse(message);
+
+            // Remove typing indicator
+            liveChatMessages.removeChild(typingIndicator);
+
+            // Display bot message with bot logo
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('bot-message');
+            const botLogo = document.createElement('img');
+botLogo.src = 'alfa.jpg'; // Make sure to add alfa.jpg to your project
+            botLogo.alt = 'Bot';
+            botLogo.classList.add('bot-logo');
+            botMessage.appendChild(botLogo);
+
+            const botText = document.createElement('span');
+            botText.textContent = botReply;
+            botMessage.appendChild(botText);
+
+            liveChatMessages.appendChild(botMessage);
+            liveChatMessages.scrollTop = liveChatMessages.scrollHeight;
+        });
+    </script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #222; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10000; font-family: Arial, sans-serif; font-size: 14px; box-shadow: 0 -2px 8px rgba(0,0,0,0.3);">
+        <div>
+            Kami menggunakan cookie untuk meningkatkan pengalaman Anda di situs ini. Dengan melanjutkan menggunakan situs ini, Anda menyetujui <a href="#terms" style="color: #4CAF50; text-decoration: underline;">Syarat dan Ketentuan</a> kami.
+        </div>
+        <button id="accept-cookies-btn" style="background-color: #4CAF50; border: none; color: white; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold;">Terima</button>
+    </div>
+
+    </body>
+</html>

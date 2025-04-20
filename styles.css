@@ -1,0 +1,631 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container for centering and max width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header styling */
+header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(30, 144, 255, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 2.5rem;
+  background-color: #007acc;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #e0e7ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+header nav ul li a {
+  color: #e0e7ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+header nav ul li a:hover {
+  color: #a8c0ff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero section */
+#hero {
+  background: linear-gradient(135deg, #007acc 0%, #1e90ff 100%);
+  color: #f0f4ff;
+  padding: 80px 0;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.5);
+}
+
+#hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #f0f4ff;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+#hero p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #d0d8f0;
+  font-weight: 600;
+}
+
+/* Section headings */
+h2, h3 {
+  color: #1e90ff;
+  margin-bottom: 25px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+/* Increase font size for "Kebutuhan" and "Jasa" headings */
+#services > h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+#services {
+  background: #e6f0ff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 15px rgba(30, 144, 255, 0.15);
+}
+
+/* Services section */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.service-item {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.service-item.standard-product {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #cce5ff,
+    #cce5ff 10px,
+    #99ccff 10px,
+    #99ccff 20px
+  );
+  color: #003366;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 122, 204, 0.3);
+}
+
+.service-item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #004a99;
+  font-weight: 900;
+}
+
+.service-item p {
+  flex-grow: 1;
+  margin-bottom: 25px;
+  color: #555;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Buttons */
+button.order-btn {
+  background-color: #007acc;
+  border: none;
+  color: white;
+  padding: 14px 24px;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  align-self: flex-start;
+  font-size: 1.1rem;
+}
+
+button.order-btn:hover {
+  background-color: #005a99;
+  box-shadow: 0 0 18px rgba(0, 90, 153, 0.8);
+}
+
+/* Cart section */
+#cart {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.1);
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cart h2 {
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #004a99;
+}
+
+#cart-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#cart-table th, #cart-table td {
+  border: none;
+  padding: 15px 20px;
+  text-align: left;
+  background-color: #f4f7f6;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+#cart-table th {
+  background-color: transparent;
+  color: #007acc;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+
+#cart-table tbody tr:hover {
+  background-color: #e6f2ff;
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.15);
+  border-radius: 10px;
+}
+
+#cart-table button {
+  background-color: #cc3300;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.4s ease;
+  font-size: 1rem;
+}
+
+#cart-table button:hover {
+  background-color: #801a00;
+}
+
+/* Payment section */
+#payment {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.1);
+  margin-bottom: 50px;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #004a99;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.payment-methods img {
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.2);
+}
+
+.payment-methods img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
+}
+
+/* Payment success message */
+#payment-success {
+  border: 2px solid #007acc;
+  background-color: #cce5ff;
+  color: #004a99;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+#payment-success.show {
+  opacity: 1;
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Contact section */
+#contact {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.1);
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #333;
+}
+
+#contact h2 {
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #004a99;
+}
+
+.personal-info h3 {
+  margin-bottom: 15px;
+  color: #004a99;
+  font-weight: 700;
+}
+
+.personal-info p {
+  margin: 8px 0;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #007acc;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 700;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  border-radius: 0 0 15px 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
+}
+
+/* Testimonials section */
+#testimonials {
+  background-color: #e6f4ff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.1);
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.testimonial-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 320px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #222;
+  font-weight: 600;
+}
+
+.testimonial-item p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.testimonial-item h4 {
+  text-align: right;
+  color: #222;
+  font-weight: 900;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Back to top button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 6px 12px rgba(30,144,255,0.3);
+  display: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #005a99;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .service-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+
+  /* Make container padding smaller on medium screens */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Adjust font sizes for medium screens */
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero h2 {
+    font-size: 2.2rem;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Make container padding smaller on small screens */
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Increase button size for easier tapping */
+  button.order-btn {
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+
+  /* Adjust font sizes for better readability */
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  /* Make nav links larger and easier to tap */
+  header nav ul li a {
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+  }
+
+  /* Adjust testimonial items to full width */
+  .testimonial-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .testimonial-item {
+    max-width: 100%;
+    flex: none;
+  }
+
+  /* Adjust cart table for small screens */
+  #cart-table, #cart-table thead, #cart-table tbody, #cart-table th, #cart-table td, #cart-table tr {
+    display: block;
+  }
+
+  #cart-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #cart-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #007acc;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  #cart-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  #cart-table td:before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #005a99;
+  }
+
+  #cart-table td:nth-of-type(1):before { content: "Layanan"; }
+  #cart-table td:nth-of-type(2):before { content: "Jumlah"; }
+  #cart-table td:nth-of-type(3):before { content: "Harga (Rp)"; }
+  #cart-table td:nth-of-type(4):before { content: "Aksi"; }
+
+  /* Adjust back to top button size and position */
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    padding: 6px 12px;
+  }
+
+  #hero h2 {
+    font-size: 1.4rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  button.order-btn {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .service-item {
+    padding: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  #cart-table td {
+    padding-left: 40%;
+  }
+
+  #cart-table td:before {
+    width: 40%;
+  }
+}
+
+/* Modal styles for QRIS image enlargement */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100vh;
+  border: 4px solid #fff;
+  border-radius: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}

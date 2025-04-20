@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pembayaran - Layanan Hosting</title>
+    <link rel="icon" type="image/jpeg" href="alfa.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        .payment-methods {
+            background-color: #f9f9f9;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .payment-methods h3 {
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .payment-methods ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+            justify-content: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .payment-methods ul li {
+            background-color: #e6f0ff;
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            padding: 10px 15px;
+            min-width: 150px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #004085;
+            box-shadow: 0 2px 5px rgba(0,123,255,0.2);
+            transition: background-color 0.3s ease;
+        }
+        .payment-methods ul li:hover {
+            background-color: #cce0ff;
+            cursor: default;
+        }
+        #payment-amount {
+            text-align: center;
+            color: #d6336c;
+            font-size: 20px;
+            font-weight: 900;
+            margin-top: 20px;
+        }
+        a#download-qris {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a#download-qris:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pembayaran Layanan Hosting</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#cart">Keranjang</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="payment" class="container">
+        <h2>Opsi Pembayaran</h2>
+        <p><strong>Pembayaran otomatis kini sudah tersedia. Silakan lanjutkan pembayaran menggunakan QRIS secara otomatis.</strong></p>
+        <div class="payment-methods">
+            <!-- Tempel QRIS Anda di sini -->
+
+            <ul>
+                <li>
+                    <span>Dana: 082226769163</span>
+                </li>
+                <li>
+                    <span>GoPay: 082226769163</span>
+                </li>
+                <li>
+                    <span>PayPal: freefiremax.underscore@gmail.com</span>
+                </li>
+                <li>
+                    <span>OVO: 082226769163</span>
+                </li>
+            </ul>
+
+            <p><a id="download-qris" href="qris.jpg" download="qris-payment" style="display:inline-block; padding:10px 20px; background-color:#007BFF; color:#fff; border-radius:5px; font-weight:bold; text-decoration:none; transition: background-color 0.3s ease;">Download QRIS untuk Pembayaran</a></p>
+
+            <button id="confirm-payment" style="display:block; margin: 20px auto 0; padding: 12px 25px; font-size: 18px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">Konfirmasi Pembayaran & Kirim Bukti</button>
+
+        </div>
+        <p id="payment-amount" style="display:none; text-align:center; color:#d6336c; font-size:22px; font-weight:900; margin-top:30px;"></p>
+        <p id="total-to-pay" style="text-align:center; color:#198754; font-size:20px; font-weight:700; margin-top:10px;"></p>
+    </section>
+
+    <script>
+        document.getElementById('confirm-payment').addEventListener('click', function() {
+            // Retrieve cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert('Keranjang kosong. Silakan tambahkan layanan terlebih dahulu.');
+                return;
+            }
+
+            // Calculate total price from cart to ensure consistency
+            let totalPriceCalc = 0;
+            cart.forEach(item => {
+                totalPriceCalc += item.price * (item.quantity || 1);
+            });
+
+            // Build order details message
+            let message = 'Halo,i saya sudah melakukan pembayaran. Berikut detail pesanan saya:%0A';
+            cart.forEach(item => {
+                message += `- ${item.service} x${item.quantity} (Rp ${item.price.toLocaleString('id-ID')})%0A`;
+            });
+
+            // Add total price using calculated total
+            message += `%0ATotal yang dibayar: Rp ${totalPriceCalc.toLocaleString('id-ID')}`;
+
+            // Add instruction for proof of payment
+            message += '%0ASaya juga mengirimkan bukti pembayaran sebagai konfirmasi. Terima kasih.';
+
+            // WhatsApp number (replace with actual number)
+            const waNumber = '6282226769163';
+
+            // Open WhatsApp chat with pre-filled message
+            const waUrl = `https://wa.me/${waNumber}?text=${message}`;
+            window.open(waUrl, '_blank');
+
+            // Optionally clear cart after redirect
+            localStorage.removeItem('cart');
+            localStorage.removeItem('totalPrice');
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ALFA Hosting. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+    <script>
+      // Override updateCart on payment.html to avoid errors due to missing cart table
+      if (window.location.pathname.endsWith('payment.html')) {
+        if (typeof updateCart === 'function') {
+          updateCart = function() {
+            if (typeof updatePaymentAmount === 'function') {
+              updatePaymentAmount();
+            }
+          };
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.endsWith('payment.html')) {
+          if (typeof loadCart === 'function') {
+            loadCart();
+          } else if (typeof updatePaymentAmount === 'function') {
+            updatePaymentAmount();
+          }
+          console.log('localStorage cart:', localStorage.getItem('cart'));
+          console.log('localStorage totalPrice:', localStorage.getItem('totalPrice'));
+        }
+      });
+    </script>
+</body>
+</html>
