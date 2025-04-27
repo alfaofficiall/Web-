@@ -227,88 +227,56 @@ function updatePaymentAvailability() {
     }
 }
 
-// Process payment simulation
-function processPayment(method) {
+// Process payment by sending cart data to backend /payment route
+function processPayment() {
     if (cart.length === 0) {
         alert('Keranjang belanja kosong. Silakan tambahkan layanan terlebih dahulu.');
         return;
     }
 
-    // Disable all payment method images during processing
-    paymentMethods.forEach(m => m.style.pointerEvents = 'none');
-    if (paymentSuccess) {
-        paymentSuccess.style.display = 'none';
+    // Prepare data to send
+    const services = cart.map(item => ({
+        service: item.service,
+        price: item.price,
+        quantity: item.quantity
+    }));
+
+    // Removed username prompt as per request
+    const username = 'defaultUser'; // Set a default or generate username automatically
+    // Removed check for username input
+
+    // For ram, try to get from first cart item or default to '1gb'
+    let ram = '1gb';
+    if (cart.length > 0) {
+        // Try to extract ram from service name if possible
+        const ramMatch = cart[0].service.match(/(\d+gb)/i);
+        if (ramMatch) {
+            ram = ramMatch[1].toLowerCase();
+        }
     }
 
-    // Show loading spinner or message
-    const paymentSection = document.getElementById('payment');
-    let loadingDiv = document.getElementById('payment-loading');
-    if (!loadingDiv && paymentSection) {
-        loadingDiv = document.createElement('div');
-        loadingDiv.id = 'payment-loading';
-        loadingDiv.style.marginTop = '20px';
-        loadingDiv.style.padding = '15px';
-        loadingDiv.style.backgroundColor = '#fff3cd';
-        loadingDiv.style.color = '#856404';
-        loadingDiv.style.border = '1px solid #ffeeba';
-        loadingDiv.style.borderRadius = '5px';
-        loadingDiv.style.fontWeight = 'bold';
-        loadingDiv.textContent = 'Memproses pembayaran... Mohon tunggu.';
-        paymentSection.appendChild(loadingDiv);
-    }
-    if (loadingDiv) {
-        loadingDiv.style.display = 'block';
-    }
-
-    // Get the payment method name from the title attribute
-    const methodName = method.getAttribute('title') || 'metode pembayaran';
-
-    // Simulate API gateway call for quota order
-    // Replace the URL with real API endpoint if available
-    fetch('https://mock-api-gateway.example.com/order-quota', {
+    // Send POST request to backend /payment
+    fetch('/payment', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            cart: cart,
-            paymentMethod: methodName
-        })
+        body: JSON.stringify({ username, ram })
     })
     .then(response => {
         if (!response.ok) {
             throw new Error('Gagal memproses pembayaran.');
         }
-        return response.json();
+        return response.text();
     })
-    .then(data => {
-        if (loadingDiv) {
-            loadingDiv.style.display = 'none';
-        }
-        if (data.success) {
-            const paymentMethodNameSpan = document.getElementById('payment-method-name');
-            if (paymentMethodNameSpan) {
-                paymentMethodNameSpan.textContent = methodName;
-            }
-            if (paymentSuccess) {
-                paymentSuccess.style.display = 'block';
-                paymentSuccess.classList.add('show');
-            }
-            cart = [];
-            updateCart();
-            updatePaymentAmount();
-            showMessage('Pembayaran berhasil diproses. Silakan hubungi nomor +62 812-3456-7890 dan bawa bukti pembelian Anda.', 'success');
-        } else {
-            showMessage('Pembayaran gagal: ' + (data.message || 'Terjadi kesalahan.'), 'error');
-        }
-        paymentMethods.forEach(m => m.style.pointerEvents = 'auto');
+    .then(html => {
+        // Replace current page content with payment page HTML
+        document.open();
+        document.write(html);
+        document.close();
     })
     .catch(error => {
-        if (loadingDiv) {
-            loadingDiv.style.display = 'none';
-        }
         showMessage(error.message, 'error');
-        paymentMethods.forEach(m => m.style.pointerEvents = 'auto');
     });
 }
 
@@ -569,8 +537,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Save cart before redirecting
             saveCart();
-            // Redirect to payment page
-            window.location.href = 'payment.html';
+            // Instead of redirecting directly, call processPayment to get QRIS page from backend
+            processPayment();
         });
     }
 
